@@ -19,6 +19,20 @@
                ReferencedContainer = "container:Evernote.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "85FCACD7158E417A008D495D"
+               BuildableName = "EvernoteTests.octest"
+               BlueprintName = "EvernoteTests"
+               ReferencedContainer = "container:Evernote.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -27,6 +41,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "85FCACD7158E417A008D495D"
+               BuildableName = "EvernoteTests.octest"
+               BlueprintName = "EvernoteTests"
+               ReferencedContainer = "container:Evernote.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

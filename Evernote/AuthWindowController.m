@@ -71,7 +71,6 @@ static AuthWindowController *_sharedWindowController;
          redirectResponse:(NSURLResponse *)redirectResponse
            fromDataSource:(WebDataSource *)dataSource {
   EvernoteSession *session = [EvernoteSession sharedSession];
-  
   if([session handleOpenURL:request.URL]) {
     [self close];
     return nil;

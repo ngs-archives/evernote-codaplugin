@@ -233,10 +233,6 @@
         content = [content stringByReplacingCharactersInRange:match1.range withString:[self enMediaTagWithResource:img width:image.size.width height:image.size.height]];
       }
     }
-    // TODO:
-    content = [content stringByReplacingOccurrencesOfString:@"<hr>" withString:@"<hr />"];
-    content = [content stringByReplacingOccurrencesOfString:@"<br>" withString:@"<br />"];
-    //
     self.pendingNote.content = content;
     self.pendingNote.resources = resources;
     [noteStore

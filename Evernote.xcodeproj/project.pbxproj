@@ -31,6 +31,25 @@
 		85E65E9E156DD1A9009BFC0F /* EvernotePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E65E9D156DD1A9009BFC0F /* EvernotePlugin.m */; };
 		85E65EA2156DD1C2009BFC0F /* AuthWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E65EA0156DD1C2009BFC0F /* AuthWindowController.m */; };
 		85E65EA3156DD1C2009BFC0F /* AuthWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85E65EA1156DD1C2009BFC0F /* AuthWindowController.xib */; };
+		85FCACE4158E417A008D495D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85FCACE2158E417A008D495D /* InfoPlist.strings */; };
+		85FCACFC158E52C3008D495D /* NSStringSundownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FCACFB158E52C3008D495D /* NSStringSundownTests.m */; };
+		85FCACFE158E534A008D495D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FCACFD158E534A008D495D /* SenTestingKit.framework */; };
+		85FCAD00158E5351008D495D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FCACFF158E5351008D495D /* AVFoundation.framework */; };
+		85FCAD01158E5362008D495D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85C02A52158DD34300911997 /* Security.framework */; };
+		85FCAD02158E5362008D495D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E65EA7156DD593009BFC0F /* WebKit.framework */; };
+		85FCAD03158E5362008D495D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E65E85156DCD79009BFC0F /* AppKit.framework */; };
+		85FCAD04158E5362008D495D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E65E86156DCD79009BFC0F /* CoreData.framework */; };
+		85FCAD05158E5362008D495D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E65E87156DCD79009BFC0F /* Foundation.framework */; };
+		85FCAD06158E5368008D495D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E65E82156DCD79009BFC0F /* Cocoa.framework */; };
+		85FCAD07158E548B008D495D /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 853B4A9B158DFDB00040CA4E /* houdini_href_e.c */; };
+		85FCAD08158E548B008D495D /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 853B4A9C158DFDB00040CA4E /* houdini_html_e.c */; };
+		85FCAD09158E548B008D495D /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = 853B4A9D158DFDB00040CA4E /* html.c */; };
+		85FCAD0A158E548B008D495D /* html_smartypants.c in Sources */ = {isa = PBXBuildFile; fileRef = 853B4A9F158DFDB00040CA4E /* html_smartypants.c */; };
+		85FCAD0B158E548B008D495D /* NSString+Sundown.m in Sources */ = {isa = PBXBuildFile; fileRef = 853B4AA1158DFDB00040CA4E /* NSString+Sundown.m */; };
+		85FCAD0C158E548B008D495D /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = 853B4AA3158DFDB00040CA4E /* autolink.c */; };
+		85FCAD0D158E548B008D495D /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 853B4AA5158DFDB00040CA4E /* buffer.c */; };
+		85FCAD0E158E548B008D495D /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 853B4AA8158DFDB00040CA4E /* markdown.c */; };
+		85FCAD0F158E548B008D495D /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 853B4AAA158DFDB00040CA4E /* stack.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +129,14 @@
 		85E65EA1156DD1C2009BFC0F /* AuthWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthWindowController.xib; sourceTree = "<group>"; };
 		85E65EA7156DD593009BFC0F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		85E65EAF156DD76D009BFC0F /* EvernotePlugin-APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EvernotePlugin-APIKey.h"; sourceTree = "<group>"; };
+		85FCACD8158E417A008D495D /* EvernoteTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvernoteTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FCACE1158E417A008D495D /* EvernoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EvernoteTests-Info.plist"; sourceTree = "<group>"; };
+		85FCACE3158E417A008D495D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		85FCACE8158E417A008D495D /* EvernoteTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EvernoteTests-Prefix.pch"; sourceTree = "<group>"; };
+		85FCACFA158E52C3008D495D /* NSStringSundownTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringSundownTests.h; sourceTree = "<group>"; };
+		85FCACFB158E52C3008D495D /* NSStringSundownTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringSundownTests.m; sourceTree = "<group>"; };
+		85FCACFD158E534A008D495D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		85FCACFF158E5351008D495D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +148,21 @@
 				85C02A54158DD36100911997 /* Security.framework in Frameworks */,
 				85C02A55158DD36500911997 /* WebKit.framework in Frameworks */,
 				85E65E83156DCD79009BFC0F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85FCACD4158E417A008D495D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85FCAD00158E5351008D495D /* AVFoundation.framework in Frameworks */,
+				85FCACFE158E534A008D495D /* SenTestingKit.framework in Frameworks */,
+				85FCAD01158E5362008D495D /* Security.framework in Frameworks */,
+				85FCAD02158E5362008D495D /* WebKit.framework in Frameworks */,
+				85FCAD03158E5362008D495D /* AppKit.framework in Frameworks */,
+				85FCAD04158E5362008D495D /* CoreData.framework in Frameworks */,
+				85FCAD05158E5362008D495D /* Foundation.framework in Frameworks */,
+				85FCAD06158E5368008D495D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +280,7 @@
 			children = (
 				85010BBE1572BCE3004E0579 /* Shared */,
 				85E65E88156DCD79009BFC0F /* Evernote */,
+				85FCACDF158E417A008D495D /* EvernoteTests */,
 				85E65E81156DCD79009BFC0F /* Frameworks */,
 				85E65E80156DCD79009BFC0F /* Products */,
 			);
@@ -249,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				85E65E7F156DCD79009BFC0F /* Evernote.codaplugin */,
+				85FCACD8158E417A008D495D /* EvernoteTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,6 +311,8 @@
 		85E65E84156DCD79009BFC0F /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85FCACFF158E5351008D495D /* AVFoundation.framework */,
+				85FCACFD158E534A008D495D /* SenTestingKit.framework */,
 				85C02A52158DD34300911997 /* Security.framework */,
 				85E65EA7156DD593009BFC0F /* WebKit.framework */,
 				85E65E85156DCD79009BFC0F /* AppKit.framework */,
@@ -301,6 +347,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		85FCACDF158E417A008D495D /* EvernoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				85FCACE0158E417A008D495D /* Supporting Files */,
+				85FCACFA158E52C3008D495D /* NSStringSundownTests.h */,
+				85FCACFB158E52C3008D495D /* NSStringSundownTests.m */,
+			);
+			path = EvernoteTests;
+			sourceTree = "<group>";
+		};
+		85FCACE0158E417A008D495D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85FCACE1158E417A008D495D /* EvernoteTests-Info.plist */,
+				85FCACE2158E417A008D495D /* InfoPlist.strings */,
+				85FCACE8158E417A008D495D /* EvernoteTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,6 +387,24 @@
 			name = Evernote;
 			productName = Evernote;
 			productReference = 85E65E7F156DCD79009BFC0F /* Evernote.codaplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		85FCACD7158E417A008D495D /* EvernoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85FCACE9158E417A008D495D /* Build configuration list for PBXNativeTarget "EvernoteTests" */;
+			buildPhases = (
+				85FCACD3158E417A008D495D /* Sources */,
+				85FCACD4158E417A008D495D /* Frameworks */,
+				85FCACD5158E417A008D495D /* Resources */,
+				85FCACD6158E417A008D495D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EvernoteTests;
+			productName = EvernoteTests;
+			productReference = 85FCACD8158E417A008D495D /* EvernoteTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -351,6 +435,7 @@
 			projectRoot = "";
 			targets = (
 				85E65E7E156DCD79009BFC0F /* Evernote */,
+				85FCACD7158E417A008D495D /* EvernoteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -385,6 +470,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85FCACD5158E417A008D495D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85FCACE4158E417A008D495D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -400,6 +493,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ $INSTALL_BUNDLE == 1 ]; then\n  DEST=\"$USER_LIBRARY_DIR/Application Support/Coda 2/Plug-ins/$FULL_PRODUCT_NAME\"\n  ORG=\"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME\"\n  rm -rf \"$DEST\"\n  mv \"$ORG\" \"$DEST\"\nfi\n";
+		};
+		85FCACD6158E417A008D495D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -426,6 +532,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85FCACD3158E417A008D495D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85FCAD07158E548B008D495D /* houdini_href_e.c in Sources */,
+				85FCAD08158E548B008D495D /* houdini_html_e.c in Sources */,
+				85FCAD09158E548B008D495D /* html.c in Sources */,
+				85FCAD0A158E548B008D495D /* html_smartypants.c in Sources */,
+				85FCAD0B158E548B008D495D /* NSString+Sundown.m in Sources */,
+				85FCAD0C158E548B008D495D /* autolink.c in Sources */,
+				85FCAD0D158E548B008D495D /* buffer.c in Sources */,
+				85FCAD0E158E548B008D495D /* markdown.c in Sources */,
+				85FCAD0F158E548B008D495D /* stack.c in Sources */,
+				85FCACFC158E52C3008D495D /* NSStringSundownTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -441,6 +564,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				85010BC81572BCE3004E0579 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		85FCACE2158E417A008D495D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85FCACE3158E417A008D495D /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -476,6 +607,74 @@
 			};
 			name = Release;
 		};
+		85FCACEA158E417A008D495D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EvernoteTests/EvernoteTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "EvernoteTests/EvernoteTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		85FCACEB158E417A008D495D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EvernoteTests/EvernoteTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "EvernoteTests/EvernoteTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -496,6 +695,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		85FCACE9158E417A008D495D /* Build configuration list for PBXNativeTarget "EvernoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85FCACEA158E417A008D495D /* Debug */,
+				85FCACEB158E417A008D495D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
