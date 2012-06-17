@@ -1,0 +1,12 @@
+//
+//  Evernote-Project-Debug.xcconfig
+//  Evernote
+//
+//  Created by Atsushi Nagase on 5/24/12.
+//  Copyright (c) 2012 LittleApps Inc. All rights reserved.
+//
+
+#include "../Shared/Configurations/Project-Debug.xcconfig"
+#include "Evernote.xcconfig"
+
+INSTALL_BUNDLE = 1

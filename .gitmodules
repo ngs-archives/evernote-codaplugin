@@ -1,0 +1,6 @@
+[submodule "Vendors/Evernote"]
+	path = Vendors/Evernote
+	url = git@github.com:ngs/evernote-sdk-mac.git
+[submodule "Shared"]
+	path = Shared
+	url = git@github.com:ngs/codaplugins.git

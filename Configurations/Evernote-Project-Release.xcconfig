@@ -1,0 +1,11 @@
+//
+//  Evernote-Project-Release.xcconfig
+//  Evernote
+//
+//  Created by Atsushi Nagase on 5/24/12.
+//  Copyright (c) 2012 LittleApps Inc. All rights reserved.
+//
+
+#include "../Shared/Configurations/Project-Release.xcconfig"
+#include "Evernote.xcconfig"
+
