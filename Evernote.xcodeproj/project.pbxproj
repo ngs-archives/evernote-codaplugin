@@ -703,6 +703,7 @@
 				85FCACEB158E417A008D495D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

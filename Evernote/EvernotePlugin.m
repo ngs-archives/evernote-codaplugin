@@ -31,6 +31,7 @@
 - (void)createNote:(BOOL)isSelected isMarkdown:(BOOL)isMarkdown withSender:(id)sender;
 - (void)sendPendingNote;
 - (void)showAuthWindow:(id)sender;
+- (NSString *)enMediaTagWithResource:(EDAMResource *)src hint:(NSString *)hint width:(CGFloat)width height:(CGFloat)height;
 
 @property (nonatomic, strong) CodaPlugInsController *pluginController;
 @property (nonatomic, readonly) AuthWindowController *authWindowController;
@@ -197,16 +198,18 @@
     NSError *error = nil;
     NSMutableArray *resources = [NSMutableArray array];
     NSRegularExpression *re1 = [NSRegularExpression regularExpressionWithPattern:@"<img[^>]+>" options:NSRegularExpressionCaseInsensitive error:&error];
-    if(error) [NSException raise:error.domain format:error.localizedDescription];
+    if(error) [NSException raise:error.domain format:@"%@", error.localizedDescription];
     NSRegularExpression *re2 = [NSRegularExpression regularExpressionWithPattern:@"(src|alt|title)=\"([^\"]+)\"" options:NSRegularExpressionCaseInsensitive error:&error];
-    if(error) [NSException raise:error.domain format:error.localizedDescription];
-    NSArray *matches1 = [re1 matchesInString:content options:0 range:NSMakeRange(0, content.length)];
-    for (NSTextCheckingResult *match1 in matches1) {
+    if(error) [NSException raise:error.domain format:@"%@", error.localizedDescription];
+    NSTextCheckingResult *match1 = nil;
+    do {
+      match1 = [re1 firstMatchInString:content options:0 range:NSMakeRange(0, content.length)];
+      if(!match1||match1.range.location==NSNotFound) break;
       NSString *img = [content substringWithRange:match1.range];
       NSArray *matches2 = [re2 matchesInString:img options:0 range:NSMakeRange(0, img.length)];
       NSImage *image = nil;
       NSString *imageURL = nil;
-      NSString *hint = nil;
+      NSString *hint = @"";
       for (NSTextCheckingResult *match2 in matches2) {
         if(match2.numberOfRanges == 3) {
           NSString *k = [img substringWithRange:[match2 rangeAtIndex:1]];
@@ -225,14 +228,15 @@
         EDAMResource *img = [[EDAMResource alloc] init];
         img.attributes.sourceURL = imageURL;
         NSData *rawimg = [NSBitmapImageRep representationOfImageRepsInArray:image.representations usingType:NSJPEGFileType properties:[NSDictionary dictionaryWithObject:[NSDecimalNumber numberWithFloat:0.8] forKey:NSImageCompressionFactor]];
-        EDAMData *imgd = [[EDAMData alloc] initWithBodyHash:rawimg size:[rawimg length] body:rawimg];
+        EDAMData *imgd = [[EDAMData alloc] initWithBodyHash:rawimg size:(int)[rawimg length] body:rawimg];
 				[img setData:imgd];
 				[img setRecognition:imgd];
 				[img setMime:@"image/jpeg"];
         [resources addObject:img];
-        content = [content stringByReplacingCharactersInRange:match1.range withString:[self enMediaTagWithResource:img width:image.size.width height:image.size.height]];
+        content = [content stringByReplacingCharactersInRange:match1.range withString:[self enMediaTagWithResource:img hint:hint width:image.size.width height:image.size.height]];
       }
-    }
+    } while(YES);
+    
     self.pendingNote.content = content;
     self.pendingNote.resources = resources;
     [noteStore
@@ -256,9 +260,9 @@
   
 }
 
-- (NSString *)enMediaTagWithResource:(EDAMResource *)src width:(CGFloat)width height:(CGFloat)height {
+- (NSString *)enMediaTagWithResource:(EDAMResource *)src hint:(NSString *)hint width:(CGFloat)width height:(CGFloat)height {
 	NSString *sizeAtr = width > 0 && height > 0 ? [NSString stringWithFormat:@"height=\"%.0f\" width=\"%.0f\" ",height,width]:@"";
-	return [NSString stringWithFormat:@"<en-media type=\"%@\" %@hash=\"%@\"/>",src.mime,sizeAtr,[src.data.body md5]];
+	return [NSString stringWithFormat:@"<en-media type=\"%@\" hint=\"%@\" %@hash=\"%@\"/>",src.mime,hint, sizeAtr,[src.data.body md5]];
 }
 
 @end
