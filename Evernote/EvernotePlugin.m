@@ -31,7 +31,7 @@
 - (void)createNote:(BOOL)isSelected isMarkdown:(BOOL)isMarkdown withSender:(id)sender;
 - (void)sendPendingNote;
 - (void)showAuthWindow:(id)sender;
-- (NSString *)enMediaTagWithResource:(EDAMResource *)src hint:(NSString *)hint width:(CGFloat)width height:(CGFloat)height;
+- (NSString *)enMediaTagWithResource:(EDAMResource *)src width:(CGFloat)width height:(CGFloat)height;
 
 @property (nonatomic, strong) CodaPlugInsController *pluginController;
 @property (nonatomic, readonly) AuthWindowController *authWindowController;
@@ -209,7 +209,6 @@
       NSArray *matches2 = [re2 matchesInString:img options:0 range:NSMakeRange(0, img.length)];
       NSImage *image = nil;
       NSString *imageURL = nil;
-      NSString *hint = @"";
       for (NSTextCheckingResult *match2 in matches2) {
         if(match2.numberOfRanges == 3) {
           NSString *k = [img substringWithRange:[match2 rangeAtIndex:1]];
@@ -217,8 +216,7 @@
           if([k isEqualToString:@"src"]) {
             imageURL = v;
             image = [[NSImage alloc] initWithContentsOfURL:[NSURL URLWithString:imageURL]];
-          } else if([k isEqualToString:@"alt"] || [k isEqualToString:@"title"]) {
-            hint = v;
+            break;
           }
         }
       }
@@ -233,7 +231,7 @@
 				[img setRecognition:imgd];
 				[img setMime:@"image/jpeg"];
         [resources addObject:img];
-        content = [content stringByReplacingCharactersInRange:match1.range withString:[self enMediaTagWithResource:img hint:hint width:image.size.width height:image.size.height]];
+        content = [content stringByReplacingCharactersInRange:match1.range withString:[self enMediaTagWithResource:img width:image.size.width height:image.size.height]];
       }
     } while(YES);
     
@@ -260,9 +258,9 @@
   
 }
 
-- (NSString *)enMediaTagWithResource:(EDAMResource *)src hint:(NSString *)hint width:(CGFloat)width height:(CGFloat)height {
+- (NSString *)enMediaTagWithResource:(EDAMResource *)src width:(CGFloat)width height:(CGFloat)height {
 	NSString *sizeAtr = width > 0 && height > 0 ? [NSString stringWithFormat:@"height=\"%.0f\" width=\"%.0f\" ",height,width]:@"";
-	return [NSString stringWithFormat:@"<en-media type=\"%@\" hint=\"%@\" %@hash=\"%@\"/>",src.mime,hint, sizeAtr,[src.data.body md5]];
+	return [NSString stringWithFormat:@"<en-media type=\"%@\" %@hash=\"%@\"/>",src.mime,sizeAtr,[src.data.body md5]];
 }
 
 @end
