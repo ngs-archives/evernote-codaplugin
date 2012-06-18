@@ -1,0 +1,33 @@
+# Evernote Wiki Plug-In for [Coda 2][appstore]
+
+## How does it work
+
+![screen][screen]
+
+This plug-in allows you to clip snippets and rendered HTML from Markdown to [Evernote][evernote].
+
+## Intalling
+[Download][download], Unzip and Double click, that's all.
+
+[appstore]: http://bit.ly/coda2appstore
+[screen]:   http://ngs.github.com/evernote-codaplugin/images/screen.png
+[download]: https://github.com/ngs/evernote-codaplugin/downloads
+[evernote]: http://evernote.com/
+
+## Shortcuts
+<dl>
+  <dt>^&#x2325;&#8984;e</dt>
+  <dd>Clip file content</dd>
+</dl>
+<dl>
+  <dt>^&#x2325;&#x21e7;&#8984;e</dt>
+  <dd>Clip selection</dd>
+</dl>
+<dl>
+  <dt>^&#x2325;&#8984;m</dt>
+  <dd>Clip Markdown rendered file content</dd>
+</dl>
+<dl>
+  <dt>^&#x2325;&#x21e7;&#8984;m</dt>
+  <dd>Clip Markdown rendered selection</dd>
+</dl>
