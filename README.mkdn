@@ -1,4 +1,4 @@
-# Evernote Wiki Plug-In for [Coda 2][appstore]
+# [Coda 2][appstore] Evernote Plugin
 
 ## How does it work
 

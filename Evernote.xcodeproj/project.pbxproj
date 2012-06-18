@@ -110,12 +110,13 @@
 		853B4ABB158E0B9E0040CA4E /* NSData+md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+md5.m"; sourceTree = "<group>"; };
 		853B4ABC158E0B9E0040CA4E /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
 		853B4ABD158E0B9E0040CA4E /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		85522FA6158EE07C00E2E29B /* UnitTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UnitTests.xcconfig; sourceTree = "<group>"; };
 		85C0295C158DC48500911997 /* Evernote-Project-Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Evernote-Project-Debug.xcconfig"; sourceTree = "<group>"; };
 		85C0295D158DC48500911997 /* Evernote-Project-Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Evernote-Project-Release.xcconfig"; sourceTree = "<group>"; };
 		85C0295E158DC48500911997 /* Evernote.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Evernote.xcconfig; sourceTree = "<group>"; };
 		85C02A43158DD31600911997 /* evernote-sdk-mac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "evernote-sdk-mac.xcodeproj"; path = "Vendors/Evernote/evernote-sdk-mac/evernote-sdk-mac.xcodeproj"; sourceTree = "<group>"; };
 		85C02A52158DD34300911997 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		85E65E7F156DCD79009BFC0F /* Evernote.codaplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Evernote.codaplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E65E7F156DCD79009BFC0F /* .bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E65E82156DCD79009BFC0F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		85E65E85156DCD79009BFC0F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		85E65E86156DCD79009BFC0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -129,7 +130,7 @@
 		85E65EA1156DD1C2009BFC0F /* AuthWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthWindowController.xib; sourceTree = "<group>"; };
 		85E65EA7156DD593009BFC0F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		85E65EAF156DD76D009BFC0F /* EvernotePlugin-APIKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EvernotePlugin-APIKey.h"; sourceTree = "<group>"; };
-		85FCACD8158E417A008D495D /* EvernoteTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EvernoteTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85FCACD8158E417A008D495D /* .bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = .bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FCACE1158E417A008D495D /* EvernoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EvernoteTests-Info.plist"; sourceTree = "<group>"; };
 		85FCACE3158E417A008D495D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		85FCACE8158E417A008D495D /* EvernoteTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EvernoteTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 				85010BC41572BCE3004E0579 /* Project-Debug.xcconfig */,
 				85010BC51572BCE3004E0579 /* Project-Release.xcconfig */,
 				85010BC61572BCE3004E0579 /* Project.xcconfig */,
+				85522FA6158EE07C00E2E29B /* UnitTests.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -291,8 +293,8 @@
 		85E65E80156DCD79009BFC0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85E65E7F156DCD79009BFC0F /* Evernote.codaplugin */,
-				85FCACD8158E417A008D495D /* EvernoteTests.octest */,
+				85E65E7F156DCD79009BFC0F /* .bundle */,
+				85FCACD8158E417A008D495D /* .bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -386,7 +388,7 @@
 			);
 			name = Evernote;
 			productName = Evernote;
-			productReference = 85E65E7F156DCD79009BFC0F /* Evernote.codaplugin */;
+			productReference = 85E65E7F156DCD79009BFC0F /* .bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		85FCACD7158E417A008D495D /* EvernoteTests */ = {
@@ -404,7 +406,7 @@
 			);
 			name = EvernoteTests;
 			productName = EvernoteTests;
-			productReference = 85FCACD8158E417A008D495D /* EvernoteTests.octest */;
+			productReference = 85FCACD8158E417A008D495D /* .bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -609,69 +611,30 @@
 		};
 		85FCACEA158E417A008D495D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85522FA6158EE07C00E2E29B /* UnitTests.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EvernoteTests/EvernoteTests-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "EvernoteTests/EvernoteTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		85FCACEB158E417A008D495D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85522FA6158EE07C00E2E29B /* UnitTests.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EvernoteTests/EvernoteTests-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "EvernoteTests/EvernoteTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				VALIDATE_PRODUCT = YES;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
