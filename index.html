@@ -8,58 +8,89 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta itemprop="name" content="Evernote Plug-In for Coda 2">
+    <meta itemprop="description" content="A plug-in for clipping snippets on Evernote from Coda 2">
+    <meta itemprop="image" content="http://ngs.github.com/gist-codaplugin/images/screen.png">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1>Evernote Plug-in for Coda 2</h1>
-        <p>Evernote Plug-in for Coda 2</p>
-        <p class="view"><a href="https://github.com/ngs/evernote-codaplugin">View the Project on GitHub <small>ngs/evernote-codaplugin</small></a></p>
-        <ul>
-          <li><a href="https://github.com/ngs/evernote-codaplugin/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/ngs/evernote-codaplugin/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/ngs/evernote-codaplugin">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
+      <h1>Evernote Plug-in for Coda 2</h1>
       <section>
-        <h1>Evernote Wiki Plug-In for <a href="http://bit.ly/coda2appstore">Coda 2</a>
-</h1>
-
-<h2>How does it work</h2>
-
-<p><img src="http://ngs.github.com/evernote-codaplugin/images/screen.png" alt="screen"></p>
-
-<p>This plug-in allows you to clip snippets and rendered HTML from Markdown to <a href="http://evernote.com/">Evernote</a>.</p>
-
-<h2>Intalling</h2>
-
-<p><a href="https://github.com/ngs/evernote-codaplugin/downloads">Download</a>, Unzip and Double click, that's all.</p>
-
-<h2>Shortcuts</h2>
-
-<dl>
-<dt>^⌥⌘e</dt>
-  <dd>Clip file content</dd>
-</dl><dl>
-<dt>^⌥⇧⌘e</dt>
-  <dd>Clip selection</dd>
-</dl><dl>
-<dt>^⌥⌘m</dt>
-  <dd>Clip Markdown rendered file content</dd>
-</dl><dl>
-<dt>^⌥⇧⌘m</dt>
-  <dd>Clip Markdown rendered selection</dd>
-</dl>
+        <h2>How does it work</h2>
+        <p><img src="images/screen.png" alt="screen"></p>
+        <p>This plug-in allows you to clip snippets and rendered HTML from Markdown to <a href="http://evernote.com/">Evernote</a>.</p>
       </section>
+
+      <section id="latest">
+        <h2>The latest release</h2>
+        <p>
+          <a href="#" rel="download" class="view">
+            <b id="archive-name"></b>
+            <small>
+              <b id="archive-size"></b>&nbsp;
+              <span id="archive-uploaded"></span>
+            </small>
+          </a>
+        </p>
+      </section>
+      
+      <section id="shortcuts">
+        <h2>Shortcuts</h2>
+        <dl>
+          <dt>^&#x2325;&#8984;E</dt>
+          <dd>Clip file content</dd>
+        </dl>
+        <dl>
+          <dt>^&#x2325;&#x21E7;&#8984;E</dt>
+          <dd>Clip selection</dd>
+        </dl>
+        <dl>
+          <dt>^&#x2325;&#8984;M</dt>
+          <dd>Clip Markdown rendered file content</dd>
+        </dl>
+        <dl>
+          <dt>^&#x2325;&#x21E7;&#8984;M</dt>
+          <dd>Clip Markdown rendered selection</dd>
+        </dl>
+      </section>
+      
+      <section id="installing">
+        <h2>Intalling</h2>
+        <p><a href="#" rel="download">Download</a>, Unzip and Double click, that's all.</p>
+        <p class="view"><a href="https://github.com/ngs/evernote-codaplugin">View the Project on GitHub <small>ngs/evernote-codaplugin</small></a></p>
+      </section>
+
       <footer>
-        <p>This project is maintained by <a href="https://github.com/ngs">ngs</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <g:plusone size="tall" annotation="inline" width="400"></g:plusone>
+        <p class="credit">This project is maintained by <a href="https://github.com/ngs">ngs</a></p>
       </footer>
     </div>
+    <script src="javascripts/relative_date.js"></script>
     <script src="javascripts/scale.fix.js"></script>
+    <script src="javascripts/download.js"></script>
+    <script src="https://api.github.com/repos/ngs/evernote-codaplugin/downloads?callback=showButton"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-200187-31']);
+      _gaq.push(['_trackPageview']);
     
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
   </body>
 </html>
