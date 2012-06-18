@@ -67,7 +67,7 @@
                               consumerKey:kENConsumerKey
                            consumerSecret:kENConsumerSecret];
     
-    [aController registerActionWithTitle:NSLocalizedString(@"Clip file content to Evernote", nil)
+    [aController registerActionWithTitle:NSLocalizedString(@"Clip file content", nil)
                    underSubmenuWithTitle:nil
                                   target:self
                                 selector:@selector(createNote:)
@@ -76,7 +76,7 @@
                               pluginName:self.name];
     
     
-    [aController registerActionWithTitle:NSLocalizedString(@"Clip selection to Evernote", nil)
+    [aController registerActionWithTitle:NSLocalizedString(@"Clip selection", nil)
                    underSubmenuWithTitle:nil
                                   target:self
                                 selector:@selector(createNoteFromSelection:)
@@ -84,7 +84,7 @@
                            keyEquivalent:@"$^~@e"
                               pluginName:self.name];
     
-    [aController registerActionWithTitle:NSLocalizedString(@"Clip file content to Evernote as Markdown", nil)
+    [aController registerActionWithTitle:NSLocalizedString(@"Clip Markdown rendered file content", nil)
                    underSubmenuWithTitle:nil
                                   target:self
                                 selector:@selector(createMarkdownNote:)
@@ -93,7 +93,7 @@
                               pluginName:self.name];
     
     
-    [aController registerActionWithTitle:NSLocalizedString(@"Clip selection to Evernote as Markdown", nil)
+    [aController registerActionWithTitle:NSLocalizedString(@"Clip Markdown rendered selection", nil)
                    underSubmenuWithTitle:nil
                                   target:self
                                 selector:@selector(createMarkdownNoteFromSelection:)
@@ -168,7 +168,7 @@
   EDAMNote *note = [[EDAMNote alloc] init];
   NSMutableString* contentStr = [[NSMutableString alloc] initWithString:kENMLPrefix];
   content = isMarkdown ?
-  [content sd_renderedString] :
+  [content sd_renderedStringWithRenderFlags:HTML_SKIP_HTML|HTML_USE_XHTML|HTML_ESCAPE] :
   [NSString stringWithFormat:@"<pre>%@</pre>",
    [content stringByEncodingHTMLEntities]];
   [contentStr appendString:content];

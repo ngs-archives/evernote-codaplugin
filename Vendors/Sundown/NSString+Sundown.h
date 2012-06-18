@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "html.h"
 
 @interface NSString (Sundown)
 
 - (NSString *)sd_renderedString;
+- (NSString *)sd_renderedStringWithRenderFlags:(unsigned int)render_flags;
 
 @end

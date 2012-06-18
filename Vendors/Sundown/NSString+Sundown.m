@@ -17,6 +17,10 @@
 //
 
 - (NSString *)sd_renderedString {
+  return [self sd_renderedStringWithRenderFlags:0];
+}
+
+- (NSString *)sd_renderedStringWithRenderFlags:(unsigned int)render_flags {
   struct sd_callbacks callbacks;
   struct html_renderopt options;
   const char *rawMarkdown = [self cStringUsingEncoding:NSUTF8StringEncoding];
@@ -25,7 +29,6 @@
   
   // Parse the markdown into a new buffer using Sundown.
   struct buf *outputBuffer = bufnew(64);
-  unsigned int render_flags = HTML_SKIP_HTML|HTML_USE_XHTML|HTML_ESCAPE;
   sdhtml_renderer(&callbacks, &options, render_flags);
   unsigned int extensions = MKDEXT_NO_INTRA_EMPHASIS|MKDEXT_TABLES|MKDEXT_FENCED_CODE|MKDEXT_AUTOLINK|MKDEXT_STRIKETHROUGH|MKDEXT_SPACE_HEADERS|MKDEXT_SUPERSCRIPT|MKDEXT_LAX_SPACING;
   struct sd_markdown *markdown = sd_markdown_new(extensions, 16, &callbacks, &options);
