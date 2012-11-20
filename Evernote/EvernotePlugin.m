@@ -240,11 +240,23 @@
     [noteStore
      createNote:self.pendingNote
      success:^(EDAMNote *note) {
-       [[NSWorkspace sharedWorkspace]
-        openURL:
-        [NSURL URLWithString:
-         [NSString stringWithFormat:
-          @"https://%@/view/%@", kENHost, note.guid]]];
+       NSWorkspace *ws = [NSWorkspace sharedWorkspace];
+       [[EvernoteUserStore userStore]
+        getUserWithSuccess:^(EDAMUser *user) {
+          NSURL *URL = [NSURL URLWithString:
+                        [NSString stringWithFormat:@"evernote:///view/%d/%@/%@//",
+                         user.id, user.shardId, note.guid]];
+          if(![ws openURL:URL]) {
+            URL = [NSURL URLWithString:
+                   [NSString stringWithFormat:@"https://%@/view/%@", kENHost, note.guid]];
+            [ws openURL:URL];
+          }
+        }
+        failure:^(NSError *error) {
+          
+        }];
+       
+       
      }
      failure:^(NSError *error) {
        [NSAlert alertWithError:error];
